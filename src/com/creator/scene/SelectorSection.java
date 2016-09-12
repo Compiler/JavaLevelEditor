@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class SelectorSection {
 
-	private Rectangle2D overlayRect, entityRect, lightRect;
+	private Rectangle2D overlayRect, toolbar;
 	private Font font;
 
 
@@ -17,8 +17,8 @@ public class SelectorSection {
 
 	private SelectorButtons buttons;
 	public SelectorSection(float x, float y, float width, float height) {
-		overlayRect = new Rectangle2D.Float(x, y + height / 32, width, height - height / 32);
-
+		overlayRect = new Rectangle2D.Float(x, y + height / 64, width, height - height / 64);
+		toolbar = new Rectangle2D.Float(x, y, width * 100, height / 64);
 
 		this.x = x;
 		this.y = y;
@@ -39,6 +39,8 @@ public class SelectorSection {
 		graphics.fill(overlayRect);
 		graphics.setColor(Color.lightGray);
 		graphics.draw(overlayRect);
+		graphics.setColor(Color.LIGHT_GRAY);
+		graphics.fill(toolbar);
 
 	}
 

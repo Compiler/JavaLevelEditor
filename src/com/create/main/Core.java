@@ -24,7 +24,7 @@ public class Core {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(screenWidth / 2, screenHeight / 2);
 		frame.setLocation(screenWidth / 4, screenHeight / 4);
-		frame.getContentPane().setBackground(new Color(.35f, .35f, .35f));
+		frame.getContentPane().setBackground(Color.black);
 		frame.setVisible(true);
 		
 		while(true){
