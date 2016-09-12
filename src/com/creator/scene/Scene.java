@@ -33,7 +33,7 @@ public class Scene extends JPanel {
 		section = new SelectorSection(0, 0, screenWidth / 16, screenHeight);
 		section.add(this);
 
-		map = new Map(10, 10);
+		map = new Map(100, 100);
 
 		this.addMouseListener(new MouseAdapter() {
 			@Override

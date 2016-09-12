@@ -12,7 +12,7 @@ public class Map {
 	
 	private int width, height;
 	
-	private final int cell = 25;
+	private final int cell = 15;
 	
 	public static Color col;
 	
