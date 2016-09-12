@@ -21,6 +21,7 @@ public class Scene extends JPanel {
 	private Map map;
 
 	private float mouseX, mouseY;
+	boolean update = false;
 	public Scene(int sWidth, int sHeight) {
 
 		this.setLayout(null);
@@ -32,13 +33,14 @@ public class Scene extends JPanel {
 		section = new SelectorSection(0, 0, screenWidth / 16, screenHeight);
 		section.add(this);
 
-		map = new Map(100, 100);
+		map = new Map(10, 10);
 
 		this.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				mouseX = e.getX();
 				mouseY = e.getY();
+				update = true;
 			}
 		});
 
@@ -77,7 +79,10 @@ public class Scene extends JPanel {
 
 	@Override
 	public void paint(Graphics g) {
-		map.update(mouseX, mouseY);
+		if(update){
+			map.update(mouseX, mouseY);
+			update = false;
+		}
 		
 		setDoubleBuffered(true);
 		Graphics2D g2d = (Graphics2D) g;

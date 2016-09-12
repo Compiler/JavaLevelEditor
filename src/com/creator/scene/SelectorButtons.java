@@ -11,6 +11,8 @@ import javax.swing.SwingConstants;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import com.creator.map.Map;
+
 public class SelectorButtons {
 	
 	
@@ -119,6 +121,7 @@ public class SelectorButtons {
 		    public void itemStateChanged(ItemEvent e) {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {//checkbox has been selected
 		        	buttons.get(3).setEnabled(false);
+		        	Map.col = Color.pink;
 					buttons.get(4).setEnabled(false);
 					buttons.get(3).setSelected(false);
 					buttons.get(4).setSelected(false);
@@ -150,6 +153,7 @@ public class SelectorButtons {
 		    public void itemStateChanged(ItemEvent e) {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {//checkbox has been selected
 		        	buttons.get(2).setEnabled(false);
+		        	Map.col = Color.cyan;
 					buttons.get(4).setEnabled(false);
 					buttons.get(2).setSelected(false);
 					buttons.get(4).setSelected(false);
@@ -181,6 +185,7 @@ public class SelectorButtons {
 		    public void itemStateChanged(ItemEvent e) {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {//checkbox has been selected
 		        	buttons.get(2).setEnabled(false);
+		        	Map.col = Color.green;
 					buttons.get(3).setEnabled(false);
 					buttons.get(2).setSelected(false);
 					buttons.get(3).setSelected(false);
@@ -248,6 +253,7 @@ public class SelectorButtons {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {//checkbox has been selected
 		        	buttons.get(5).setEnabled(false);
 					buttons.get(5).setSelected(false);
+					Map.col = Color.red;
 					System.out.println("disabled point");
 		        } else if(e.getStateChange() == ItemEvent.DESELECTED){
 		        	buttons.get(5).setEnabled(true);
