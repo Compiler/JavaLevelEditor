@@ -15,14 +15,14 @@ public class Scene extends JPanel {
 	private SelectorSection section;
 	public Scene(int sWidth, int sHeight) {
 		
+		this.setLayout(null);
 		this.screenWidth = sWidth;
 		this.screenHeight = sHeight;
 		//initMap();
-		this.setOpaque(true);
+		this.setOpaque(false);
 		this.setBackground(Color.gray);
 		section = new SelectorSection(0, 0, screenWidth / 16, screenHeight);
-		
-		
+		section.add(this);
 	} 
 	
 	public void initMap(){
@@ -59,11 +59,11 @@ public class Scene extends JPanel {
 
 	@Override
 	public void paint(Graphics g) {
-		super.paint(g);
 		setDoubleBuffered(true);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		section.render(g2d);
+		super.paint(g);
 		
 	}
 
