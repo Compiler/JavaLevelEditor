@@ -14,6 +14,8 @@ public class Core {
 	public static void main(String[] args) throws InterruptedException{
 		
 		
+
+		
 		
 		
 		int screenWidth = Toolkit.getDefaultToolkit().getScreenSize().width;
