@@ -14,7 +14,7 @@ public class Map {
 	
 	private final int cell = 15;
 	
-	public static Color col;
+	public static Color col = Color.lightGray;
 	
 	public Map(int width, int height){
 		
@@ -35,6 +35,8 @@ public class Map {
 	}
 	
 	public void update(float x, float y){
+		
+		
 		map[(int) (x / cell > 0 && x / cell < width ? x / cell: 0)][(int) (y / cell > 0 && y / cell < height ? y / cell: 0)].setColor(col);
 		System.out.println("(" + x + ", " + y + ")");
 	}

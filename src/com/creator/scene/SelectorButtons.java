@@ -221,6 +221,7 @@ public class SelectorButtons {
 		    public void itemStateChanged(ItemEvent e) {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {//checkbox has been selected
 		        	buttons.get(6).setEnabled(false);
+		        	Map.col = Color.YELLOW;
 					buttons.get(6).setSelected(false);
 					System.out.println("disabled cone");
 		        } else if(e.getStateChange() == ItemEvent.DESELECTED){
